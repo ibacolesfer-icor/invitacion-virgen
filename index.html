@@ -512,6 +512,30 @@
             submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> <span>Confirmar mi Asistencia</span>`;
             submitBtn.disabled = false;
         }
+
+        // --- 2. PEGA AQUÍ ABAJO EL CÓDIGO NUEVO PARA GOOGLE SHEETS ---
+
+  const WEB_APP_URL = "AQUÍ_PEGAS_TU_ENLACE_LARGO_DE_APPS_SCRIPT";
+
+  document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita que la página se recargue
+    
+    const formData = new FormData(this);
+    
+    fetch(WEB_APP_URL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('¡Muchas gracias! Tu confirmación ha sido registrada con éxito.');
+      this.reset(); // Limpia el formulario
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Ocurrió un error al enviar tus datos. Por favor, inténtalo de nuevo.');
+    });
+  });
     </script>
 </body>
 </html>
