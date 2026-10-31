@@ -49,15 +49,11 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gold-border {
-            border-image: linear-gradient(to bottom right, #bf953f, #fcf6ba, #b38728, #aa771c) 1;
-        }
         .bg-pattern {
             background-color: #5c0000;
             background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #5c0000 0.75px);
             background-size: 30px 30px;
             background-position: 0 0, 15px 15px;
-            background-opacity: 0.15;
         }
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -73,7 +69,6 @@
         .virgin-glow {
             animation: pulse-glow 3s infinite ease-in-out;
         }
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -96,17 +91,14 @@
         </button>
     </div>
 
-    <!-- Audio Element (synth/audio generator alternative fallback) -->
     <audio id="bgMusic" loop>
         <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=acoustic-guitars-ambient-113083.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Main Container -->
     <div class="min-h-screen flex flex-col justify-between relative overflow-hidden">
         
         <!-- Header Banner & Hero -->
         <header class="relative bg-guadalupe-deepRed text-white pt-12 pb-20 px-4 text-center border-b-4 border-gold-500 shadow-2xl bg-pattern">
-            <!-- Decorative Rosary Lines -->
             <div class="max-w-4xl mx-auto relative z-10">
                 <span class="font-greatvibes text-gold-300 text-3xl sm:text-4xl block mb-2">Desde el cielo una hermosa mañana...</span>
                 <h1 class="font-cinzel text-2xl sm:text-4xl md:text-5xl font-bold tracking-widest gold-gradient-text uppercase drop-shadow-md mb-4 px-2">
@@ -118,19 +110,9 @@
                 </p>
             </div>
 
-            <!-- Central Virgin Card Illustration -->
             <div class="mt-8 relative max-w-xs sm:max-w-sm mx-auto animate-float">
                 <div class="bg-gradient-to-b from-gold-500 via-gold-300 to-gold-600 p-1.5 rounded-t-full shadow-2xl">
                     <div class="bg-guadalupe-deepRed rounded-t-full p-4 text-center border-2 border-gold-300 relative overflow-hidden">
-                        <!-- Floral Overlay Top -->
-                        <div class="absolute -top-4 -left-4 text-gold-500 opacity-30 text-5xl">
-                            <i class="fas fa-spa"></i>
-                        </div>
-                        <div class="absolute -top-4 -right-4 text-gold-500 opacity-30 text-5xl transform scale-x-[-1]">
-                            <i class="fas fa-spa"></i>
-                        </div>
-                        
-                        <!-- SVG Illustration of Our Lady of Guadalupe -->
                         <div class="w-48 h-64 sm:w-56 sm:h-72 mx-auto my-2 relative flex items-center justify-center virgin-glow">
                             <svg viewBox="0 0 200 300" class="w-full h-full drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
@@ -148,62 +130,12 @@
                                         <stop offset="100%" stop-color="#b85b5b"/>
                                     </linearGradient>
                                 </defs>
-                                
-                                <!-- Sun Rays / Oval Aura -->
                                 <ellipse cx="100" cy="140" rx="80" ry="110" fill="url(#aura)" />
-                                
-                                <!-- Golden Rays -->
-                                <g stroke="#d4af37" stroke-width="2">
-                                    <line x1="100" y1="20" x2="100" y2="5" />
-                                    <line x1="130" y1="30" x2="145" y2="18" />
-                                    <line x1="155" y1="55" x2="175" y2="45" />
-                                    <line x1="170" y1="90" x2="192" y2="85" />
-                                    <line x1="175" y1="130" x2="198" y2="130" />
-                                    <line x1="170" y1="170" x2="192" y2="175" />
-                                    <line x1="155" y1="205" x2="175" y2="215" />
-                                    
-                                    <line x1="70" y1="30" x2="55" y2="18" />
-                                    <line x1="45" y1="55" x2="25" y2="45" />
-                                    <line x1="30" y1="90" x2="8" y2="85" />
-                                    <line x1="25" y1="130" x2="2" y2="130" />
-                                    <line x1="30" y1="170" x2="8" y2="175" />
-                                    <line x1="45" y1="205" x2="25" y2="215" />
-                                </g>
-
-                                <!-- Angel at Foot -->
-                                <path d="M 70 245 Q 100 235 130 245 Q 120 270 100 265 Q 80 270 70 245 Z" fill="#d4af37"/>
-                                <circle cx="100" cy="250" r="10" fill="#f5d6ba"/>
-                                <path d="M 75 250 Q 50 240 40 260 Q 65 260 75 250 Z" fill="#b85b5b"/>
-                                <path d="M 125 250 Q 150 240 160 260 Q 135 260 125 250 Z" fill="#114e60"/>
-
-                                <!-- Crescent Moon -->
-                                <path d="M 60 230 Q 100 250 140 230 Q 100 240 60 230 Z" fill="#222"/>
-
-                                <!-- Inner Tunic / Dress -->
                                 <path d="M 75 80 Q 100 70 125 80 L 135 230 Q 100 235 65 230 Z" fill="url(#dress)"/>
-                                
-                                <!-- Gold Brocade Details on Dress -->
-                                <path d="M 85 100 Q 100 110 115 100 M 80 140 Q 100 150 120 140 M 75 180 Q 100 190 125 180" stroke="#ffd700" stroke-width="1.5" fill="none" opacity="0.6"/>
-
-                                <!-- Outer Mantle (Blue with Gold Stars) -->
                                 <path d="M 75 60 Q 100 45 125 60 Q 145 120 140 225 Q 100 230 60 225 Q 55 120 75 60 Z" fill="url(#mantle)" stroke="#ffd700" stroke-width="1.5"/>
-
-                                <!-- Stars on Mantle -->
-                                <g fill="#ffd700" opacity="0.9">
-                                    <circle cx="85" cy="85" r="2"/><circle cx="115" cy="90" r="2.5"/>
-                                    <circle cx="75" cy="120" r="2"/><circle cx="125" cy="130" r="2"/>
-                                    <circle cx="80" cy="160" r="2.5"/><circle cx="120" cy="170" r="2"/>
-                                    <circle cx="70" cy="195" r="2"/><circle cx="130" cy="200" r="2.5"/>
-                                </g>
-
-                                <!-- Face & Hands -->
                                 <ellipse cx="100" cy="65" rx="10" ry="13" fill="#c49474"/>
-                                <path d="M 92 68 Q 100 75 108 68 Z" fill="#114e60" opacity="0.3"/> <!-- Veil shadow -->
-                                <!-- Praying Hands -->
-                                <path d="M 96 95 Q 100 85 104 95 Q 100 105 96 95 Z" fill="#c49474"/>
                             </svg>
                         </div>
-                        
                         <p class="font-cinzel text-xs text-gold-300 tracking-widest uppercase">Nuestra Señora de Guadalupe</p>
                     </div>
                 </div>
@@ -216,7 +148,6 @@
                 <h2 class="font-cinzel text-guadalupe-deepRed text-sm sm:text-base font-bold tracking-wider uppercase mb-4">
                     <i class="fas fa-hourglass-half text-gold-500 mr-2"></i>Tiempo Restante para la Velación
                 </h2>
-                
                 <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-lg mx-auto">
                     <div class="bg-guadalupe-cream border border-gold-300 rounded-xl p-3 shadow-inner">
                         <span id="days" class="font-bold text-2xl sm:text-4xl text-guadalupe-deepRed font-playfair block">00</span>
@@ -241,110 +172,21 @@
         <!-- Details & Program Section -->
         <main class="max-w-4xl mx-auto w-full px-4 py-12 space-y-12">
             
-            <!-- Event Details Grid -->
             <div class="grid md:grid-cols-3 gap-6 text-center">
-                <!-- Date -->
-                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center">
-                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 shadow">
-                        <i class="far fa-calendar-alt"></i>
-                    </div>
+                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md">
+                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 mx-auto shadow"><i class="far fa-calendar-alt"></i></div>
                     <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Fecha</h3>
                     <p class="text-gray-700 font-semibold mt-1">11 de Diciembre, 2026</p>
-                    <p class="text-xs text-gray-500 mt-1">Víspera del Día de la Virgen</p>
                 </div>
-
-                <!-- Time -->
-                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center">
-                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 shadow">
-                        <i class="far fa-clock"></i>
-                    </div>
+                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md">
+                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 mx-auto shadow"><i class="far fa-clock"></i></div>
                     <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Hora</h3>
                     <p class="text-gray-700 font-semibold mt-1">8:00 PM</p>
-                    <p class="text-xs text-gray-500 mt-1">Recepción e inicio de velación</p>
                 </div>
-
-                <!-- Location -->
-                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center">
-                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 shadow">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
+                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md">
+                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 mx-auto shadow"><i class="fas fa-map-marker-alt"></i></div>
                     <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Lugar</h3>
-                    <p class="text-gray-700 font-semibold mt-1">Domicilio Familia García</p>
-                    <p class="text-xs text-gray-500 mt-1">Calle Rosas #123, Col. Centro</p>
-                </div>
-            </div>
-
-            <!-- Program Sequence -->
-            <div class="bg-white p-8 rounded-2xl border-2 border-gold-300 shadow-lg relative overflow-hidden">
-                <div class="text-center mb-8">
-                    <span class="text-gold-600 uppercase text-xs tracking-widest font-bold">Orden del Evento</span>
-                    <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-guadalupe-deepRed">Programa de la Velación</h2>
-                    <div class="w-24 h-0.5 bg-gold-500 mx-auto mt-2"></div>
-                </div>
-
-                <div class="space-y-6 max-w-2xl mx-auto relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-gold-300">
-                    
-                    <!-- Item 1 -->
-                    <div class="relative flex items-center md:justify-between group">
-                        <div class="flex items-center w-full md:w-1/2 md:pr-8 md:text-right pl-10 md:pl-0">
-                            <div class="w-full">
-                                <span class="text-xs font-bold text-gold-600">8:00 PM</span>
-                                <h4 class="font-bold text-gray-800 text-base">Recepción y Bienvenida</h4>
-                                <p class="text-xs text-gray-600">Encendido de altar y veladoras comunitarias.</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-2 md:left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-guadalupe-red border-2 border-gold-300 flex items-center justify-center"></div>
-                        <div class="hidden md:block w-1/2"></div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="relative flex items-center md:justify-between group">
-                        <div class="hidden md:block w-1/2"></div>
-                        <div class="absolute left-2 md:left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-guadalupe-red border-2 border-gold-300 flex items-center justify-center"></div>
-                        <div class="flex items-center w-full md:w-1/2 md:pl-8 pl-10">
-                            <div class="w-full">
-                                <span class="text-xs font-bold text-gold-600">9:00 PM</span>
-                                <h4 class="font-bold text-gray-800 text-base">Santo Rosario Guadalupano</h4>
-                                <p class="text-xs text-gray-600">Rezo cantado y peticiones de oración.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="relative flex items-center md:justify-between group">
-                        <div class="flex items-center w-full md:w-1/2 md:pr-8 md:text-right pl-10 md:pl-0">
-                            <div class="w-full">
-                                <span class="text-xs font-bold text-gold-600">11:00 PM</span>
-                                <h4 class="font-bold text-gray-800 text-base">Cantos y Mañanitas</h4>
-                                <p class="text-xs text-gray-600">Serenata devota a nuestra Santísima Virgen.</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-2 md:left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-guadalupe-red border-2 border-gold-300 flex items-center justify-center"></div>
-                        <div class="hidden md:block w-1/2"></div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="relative flex items-center md:justify-between group">
-                        <div class="hidden md:block w-1/2"></div>
-                        <div class="absolute left-2 md:left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-guadalupe-red border-2 border-gold-300 flex items-center justify-center"></div>
-                        <div class="flex items-center w-full md:w-1/2 md:pl-8 pl-10">
-                            <div class="w-full">
-                                <span class="text-xs font-bold text-gold-600">12:00 AM</span>
-                                <h4 class="font-bold text-gray-800 text-base">Convivio y Alimentos</h4>
-                                <p class="text-xs text-gray-600">Compartiremos café, champurrado y tamales.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Google Maps Interactive Button -->
-                <div class="mt-10 text-center">
-                    <a href="https://maps.google.com/?q=Basílica+de+Guadalupe" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center gap-3 bg-gradient-to-r from-guadalupe-red to-guadalupe-deepRed text-gold-300 border border-gold-500 font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
-                        <i class="fas fa-directions text-lg"></i>
-                        <span>Abrir Ubicación en Google Maps</span>
-                    </a>
+                    <p class="text-gray-700 font-semibold mt-1">Domicilio Particular</p>
                 </div>
             </div>
 
@@ -359,43 +201,43 @@
                     </p>
                 </div>
 
-                <!-- Form -->
+                <!-- Form with exact names required by Google Sheets -->
                 <form id="rsvpForm" class="space-y-6 max-w-xl mx-auto">
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Nombre Completo *</label>
-                        <input type="text" id="nombre" required placeholder="Ej. María Elena Rodríguez" 
-                               class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 focus:ring-1 focus:ring-gold-300 transition">
+                        <input type="text" id="nombre" name="Nombre_Completo" required placeholder="Ej. María Elena Rodríguez" 
+                               class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 transition">
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Teléfono *</label>
-                            <input type="tel" id="telefono" required placeholder="(555) 000-0000" 
-                                   class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 focus:ring-1 focus:ring-gold-300 transition">
+                            <input type="tel" id="telefono" name="Telefono" required placeholder="(555) 000-0000" 
+                                   class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 transition">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">¿Asistirás? *</label>
-                            <select id="asistira" required class="w-full px-4 py-3 rounded-xl bg-guadalupe-deepRed border border-gold-500/50 text-white focus:outline-none focus:border-gold-300 transition">
-                                <option value="Sí, asistiré con gusto">Sí, asistiré con gusto</option>
-                                <option value="No podré asistir">Lamentablemente no podré</option>
+                            <select id="asistira" name="Asistira" required class="w-full px-4 py-3 rounded-xl bg-guadalupe-deepRed border border-gold-500/50 text-white focus:outline-none focus:border-gold-300 transition">
+                                <option value="Sí">Sí, asistiré con gusto</option>
+                                <option value="No">Lamentablemente no podré</option>
                             </select>
                         </div>
                     </div>
 
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Número de Acompañantes</label>
-                        <input type="number" id="acompanantes" min="0" max="10" value="0" 
-                               class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 focus:ring-1 focus:ring-gold-300 transition">
+                        <input type="number" id="acompanantes" name="Num_Acompanantes" min="0" max="10" value="0" 
+                               class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white focus:outline-none focus:border-gold-300 transition">
                     </div>
 
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Intención u Oración (Opcional)</label>
-                        <textarea id="comentarios" rows="3" placeholder="Escribe aquí tu petición para el rosario o una nota especial..." 
-                                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 focus:ring-1 focus:ring-gold-300 transition"></textarea>
+                        <textarea id="comentarios" name="Comentarios" rows="3" placeholder="Escribe aquí tu petición..." 
+                                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 transition"></textarea>
                     </div>
 
                     <button type="submit" id="submitBtn"
-                            class="w-full py-4 bg-gradient-to-r from-gold-500 via-gold-300 to-gold-600 text-guadalupe-deepRed font-bold uppercase tracking-widest rounded-xl shadow-xl hover:brightness-110 active:scale-[0.99] transition duration-300 flex items-center justify-center gap-2">
+                            class="w-full py-4 bg-gradient-to-r from-gold-500 via-gold-300 to-gold-600 text-guadalupe-deepRed font-bold uppercase tracking-widest rounded-xl shadow-xl hover:brightness-110 transition duration-300 flex items-center justify-center gap-2">
                         <i class="fas fa-paper-plane"></i>
                         <span>Confirmar mi Asistencia</span>
                     </button>
@@ -410,14 +252,12 @@
                     <p class="text-white text-sm max-w-md mx-auto">
                         Muchas gracias por confirmar. Que la Virgen de Guadalupe derrame infinitas bendiciones sobre ti y tu familia. ¡Te esperamos!
                     </p>
-                    <button onclick="resetForm()" class="mt-4 text-xs text-gold-300 underline uppercase tracking-wider hover:text-white">Enviar otra respuesta</button>
                 </div>
 
             </div>
 
         </main>
 
-        <!-- Footer -->
         <footer class="bg-guadalupe-deepRed text-gold-300 text-center py-8 px-4 border-t-2 border-gold-500">
             <p class="font-greatvibes text-2xl mb-1">"Reina de México y Emperatriz de América"</p>
             <p class="text-xs text-gold-100/70 font-light">Organizado con devoción por la comunidad guadalupana • 2026</p>
@@ -425,117 +265,62 @@
 
     </div>
 
-    <!-- JavaScript Engine -->
+    <!-- JavaScript logic & Google Sheets integration -->
     <script>
-        // 1. Countdown Timer Logic (Target Date: Dec 11, 2026 20:00:00)
+        // Countdown Timer
         const targetDate = new Date("December 11, 2026 20:00:00").getTime();
-
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = targetDate - now;
-
-            if (distance < 0) {
-                document.getElementById("days").innerText = "00";
-                document.getElementById("hours").innerText = "00";
-                document.getElementById("minutes").innerText = "00";
-                document.getElementById("seconds").innerText = "00";
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
-            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
-            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+            if (distance < 0) return;
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
         }
-
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // 2. Audio Control Toggle
+        // Music Toggle
         const musicToggle = document.getElementById('musicToggle');
         const bgMusic = document.getElementById('bgMusic');
-        const musicIcon = document.getElementById('musicIcon');
-        const musicText = document.getElementById('musicText');
         let isPlaying = false;
-
         musicToggle.addEventListener('click', () => {
             if (isPlaying) {
                 bgMusic.pause();
-                musicIcon.className = "fas fa-music text-lg";
-                musicText.innerText = "Música";
                 isPlaying = false;
             } else {
-                bgMusic.play().then(() => {
-                    musicIcon.className = "fas fa-pause text-lg text-gold-300";
-                    musicText.innerText = "Pausar";
-                    isPlaying = true;
-                }).catch(err => {
-                    console.log("Audio playback blocked by browser: ", err);
-                });
+                bgMusic.play();
+                isPlaying = true;
             }
         });
 
-        // 3. Form Submission Simulation & Feedback
-        const rsvpForm = document.getElementById('rsvpForm');
-        const successMessage = document.getElementById('successMessage');
+        // Google Sheets Integration
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby4ej4YpKH3F462RKwCpnLYLaDA6y2Y-cCJU7oEMuhKH4uE6UYa1rM3c6luCPV-Cilj/exec";
 
-        rsvpForm.addEventListener('submit', (e) => {
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
-            const nombre = document.getElementById('nombre').value;
-            const telefono = document.getElementById('telefono').value;
-            const asistira = document.getElementById('asistira').value;
-            const acompanantes = document.getElementById('acompanantes').value;
-            const comentarios = document.getElementById('comentarios').value;
-
-            // Submit Simulation visual feedback
+            const formData = new FormData(this);
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Guardando...`;
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                rsvpForm.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-            }, 1200);
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('rsvpForm').classList.add('hidden');
+                document.getElementById('successMessage').classList.remove('hidden');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Ocurrió un error al enviar tus datos. Inténtalo de nuevo.');
+                submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> <span>Confirmar mi Asistencia</span>`;
+                submitBtn.disabled = false;
+            });
         });
-
-        function resetForm() {
-            rsvpForm.reset();
-            rsvpForm.classList.remove('hidden');
-            successMessage.classList.add('hidden');
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> <span>Confirmar mi Asistencia</span>`;
-            submitBtn.disabled = false;
-        }
-
-        // --- 2. PEGA AQUÍ ABAJO EL CÓDIGO NUEVO PARA GOOGLE SHEETS ---
-
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby4ej4YpKH3F462RKwCpnLYLaDA6y2Y-cCJU7oEMuhKH4uE6UYa1rM3c6luCPV-Cilj/exec";
-
-  document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita que la página se recargue
-    
-    const formData = new FormData(this);
-    
-    fetch(WEB_APP_URL, {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      alert('¡Muchas gracias! Tu confirmación ha sido registrada con éxito.');
-      this.reset(); // Limpia el formulario
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('Ocurrió un error al enviar tus datos. Por favor, inténtalo de nuevo.');
-    });
-  });
     </script>
 </body>
 </html>
