@@ -44,7 +44,7 @@
             background-size: 30px 30px;
             background-position: 0 0, 15px 15px;
         }
-        /* Efecto de resplandor e iluminación suave */
+        /* Efecto de brillo iluminado para el marco rectangular */
         @keyframes glow {
             0%, 100% {
                 box-shadow: 0 0 20px #D4AF37, 0 0 35px #F4E07B;
@@ -60,16 +60,16 @@
 </head>
 <body class="font-montserrat text-gray-800 antialiased selection:bg-guadalupe-gold selection:text-white">
 
-    <!-- Header / Portada con Imagen Completa y Efecto de Brillo -->
+    <!-- Header / Portada con Imagen Rectangular y Efecto de Brillo -->
     <header class="relative bg-gradient-to-b from-guadalupe-wine via-guadalupe-deepRed to-guadalupe-wine text-white py-14 px-4 shadow-2xl text-center overflow-hidden border-b-4 border-guadalupe-gold">
         <div class="max-w-3xl mx-auto relative z-10 flex flex-col items-center">
             
-            <!-- Contenedor con la imagen ajustada para verse 100% COMPLETA -->
+            <!-- Imagen en formato rectangular elegante con marco dorado y brillo -->
             <div class="relative mb-6">
-                <div class="w-40 h-40 sm:w-52 sm:h-52 rounded-full border-4 border-guadalupe-gold image-glow bg-amber-50 p-2 flex items-center justify-center overflow-hidden shadow-2xl">
+                <div class="p-2 bg-gradient-to-b from-guadalupe-gold via-guadalupe-lightGold to-guadalupe-gold rounded-2xl image-glow shadow-2xl">
                     <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Virgen_De_Guadalupe_%28Cara%29.png/960px-Virgen_De_Guadalupe_%28Cara%29.png" 
                          alt="Nuestra Señora de Guadalupe" 
-                         class="w-full h-full object-contain drop-shadow-md">
+                         class="w-36 h-48 sm:w-44 sm:h-60 object-cover rounded-xl border-2 border-amber-200">
                 </div>
             </div>
 
