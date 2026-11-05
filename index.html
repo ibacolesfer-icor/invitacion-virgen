@@ -3,323 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velación en Honor a la Virgen de Guadalupe</title> 
-    <!-- Tailwind CSS -->
+    <title>Velación de la Virgen de Guadalupe | Familia Serrano Peña</title>
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            100: '#fdf7e7',
-                            300: '#f3d382',
-                            500: '#d4af37',
-                            600: '#aa820a',
-                            700: '#856404'
-                        },
                         guadalupe: {
-                            red: '#8b0000',
-                            deepRed: '#5c0000',
-                            blue: '#113f67',
-                            gold: '#d4af37',
-                            cream: '#fdfbf7'
+                            deepRed: '#7A1C1C',
+                            gold: '#D4AF37',
+                            cream: '#FDFBF7',
+                            darkGreen: '#1E3F20'
                         }
                     },
                     fontFamily: {
-                        cinzel: ['"Cinzel Decorative"', 'serif'],
-                        playfair: ['"Playfair Display"', 'serif'],
-                        greatvibes: ['"Great Vibes"', 'cursive'],
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
                         montserrat: ['Montserrat', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    <style>
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .bg-pattern {
-            background-color: #5c0000;
-            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #5c0000 0.75px);
-            background-size: 30px 30px;
-            background-position: 0 0, 15px 15px;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-        .animate-float {
-            animation: float 4s ease-in-out infinite;
-        }
-        @keyframes pulse-glow {
-            0%, 100% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4)); }
-            50% { filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.8)); }
-        }
-        .virgin-glow {
-            animation: pulse-glow 3s infinite ease-in-out;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #5c0000;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d4af37;
-            border-radius: 4px;
-        }
-    </style>
 </head>
-<body class="bg-guadalupe-cream font-montserrat text-gray-800 antialiased selection:bg-gold-500 selection:text-white">
+<body class="bg-guadalupe-cream font-montserrat text-gray-800 antialiased selection:bg-guadalupe-gold selection:text-white">
 
-    <!-- Audio Player Toggle -->
-    <div class="fixed top-4 right-4 z-50">
-        <button id="musicToggle" class="bg-guadalupe-deepRed/90 hover:bg-guadalupe-red border border-gold-500 text-gold-300 p-3 rounded-full shadow-2xl transition duration-300 flex items-center gap-2 backdrop-blur-md">
-            <i id="musicIcon" class="fas fa-music text-lg"></i>
-            <span id="musicText" class="text-xs font-semibold uppercase tracking-wider hidden sm:inline">Música</span>
-        </button>
-    </div>
+    <!-- Header / Portada -->
+    <header class="relative bg-guadalupe-deepRed text-white py-12 px-4 shadow-xl text-center overflow-hidden border-b-4 border-guadalupe-gold">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <span class="text-guadalupe-gold font-cinzel tracking-widest text-xs sm:text-sm uppercase block mb-2">Familia Serrano Peña</span>
+            <h1 class="font-cinzel text-3xl sm:text-5xl font-bold mb-4 text-guadalupe-gold leading-tight">
+                Velación en Honor a Nuestra Señora de Guadalupe
+            </h1>
+            <p class="font-playfair italic text-lg sm:text-xl text-gray-100 max-w-xl mx-auto mb-6">
+                "¿A caso no estoy yo aquí, que soy tu Madre? Honor a quien honor merece"
+            </p>
+            <div class="w-32 h-1 bg-guadalupe-gold mx-auto"></div>
+        </div>
+    </header>
 
-    <audio id="bgMusic" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=acoustic-guitars-ambient-113083.mp3" type="audio/mpeg">
-    </audio>
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-10 space-y-10">
 
-    <div class="min-h-screen flex flex-col justify-between relative overflow-hidden">
-        
-        <!-- Header Banner & Hero -->
-        <header class="relative bg-guadalupe-deepRed text-white pt-12 pb-20 px-4 text-center border-b-4 border-gold-500 shadow-2xl bg-pattern">
-            <div class="max-w-4xl mx-auto relative z-10">
-                <span class="font-greatvibes text-gold-300 text-3xl sm:text-4xl block mb-2">Desde el cielo una hermosa mañana...</span>
-                <h1 class="font-cinzel text-2xl sm:text-4xl md:text-5xl font-bold tracking-widest gold-gradient-text uppercase drop-shadow-md mb-4 px-2">
-                    Velación en Honor a la<br>Virgen de Guadalupe
-                </h1>
-                <div class="w-32 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto my-4"></div>
-                <p class="text-gold-100 text-sm sm:text-base max-w-xl mx-auto italic font-playfair px-4">
-                    "¿No estoy yo aquí que soy tu Madre?" Te invitamos cordialmente a acompañarnos a rendir homenaje y dar gracias a la Morenita del Tepeyac.
+        <!-- Tarjeta de Detalles del Evento -->
+        <section class="bg-white p-8 rounded-3xl border border-amber-200 shadow-xl grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            
+            <!-- Fecha -->
+            <div class="p-4 rounded-2xl bg-guadalupe-cream border border-amber-100">
+                <i class="fas fa-calendar-alt text-guadalupe-gold text-3xl mb-3"></i>
+                <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Fecha</h3>
+                <p class="text-gray-700 text-sm mt-1 font-medium">Miércoles 11 de Diciembre de 2024[cite: 1]</p>
+            </div>
+
+            <!-- Hora -->
+            <div class="p-4 rounded-2xl bg-guadalupe-cream border border-amber-100">
+                <i class="fas fa-clock text-guadalupe-gold text-3xl mb-3"></i>
+                <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Hora</h3>
+                <p class="text-gray-700 text-sm mt-1 font-medium">A partir de las 6:30 PM[cite: 1]</p>
+            </div>
+
+            <!-- Lugar -->
+            <div class="p-4 rounded-2xl bg-guadalupe-cream border border-amber-100">
+                <i class="fas fa-map-marker-alt text-guadalupe-gold text-3xl mb-3"></i>
+                <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Ubicación</h3>
+                <p class="text-gray-700 text-xs mt-1 font-medium leading-relaxed">
+                    Deseos #18, Privada Alebrijes, La Encantada Residencial[cite: 1].
                 </p>
             </div>
 
-            <div class="mt-8 relative max-w-xs sm:max-w-sm mx-auto animate-float">
-                <div class="bg-gradient-to-b from-gold-500 via-gold-300 to-gold-600 p-1.5 rounded-t-full shadow-2xl">
-                    <div class="bg-guadalupe-deepRed rounded-t-full p-4 text-center border-2 border-gold-300 relative overflow-hidden">
-                        <div class="w-48 h-64 sm:w-56 sm:h-72 mx-auto my-2 relative flex items-center justify-center virgin-glow">
-                            <svg viewBox="0 0 200 300" class="w-full h-full drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <radialGradient id="aura" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                                        <stop offset="0%" stop-color="#fff7d6" stop-opacity="0.9"/>
-                                        <stop offset="60%" stop-color="#ffd700" stop-opacity="0.6"/>
-                                        <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
-                                    </radialGradient>
-                                    <linearGradient id="mantle" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#114e60"/>
-                                        <stop offset="100%" stop-color="#0e2f38"/>
-                                    </linearGradient>
-                                    <linearGradient id="dress" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" stop-color="#e8a5a5"/>
-                                        <stop offset="100%" stop-color="#b85b5b"/>
-                                    </linearGradient>
-                                </defs>
-                                <ellipse cx="100" cy="140" rx="80" ry="110" fill="url(#aura)" />
-                                <path d="M 75 80 Q 100 70 125 80 L 135 230 Q 100 235 65 230 Z" fill="url(#dress)"/>
-                                <path d="M 75 60 Q 100 45 125 60 Q 145 120 140 225 Q 100 230 60 225 Q 55 120 75 60 Z" fill="url(#mantle)" stroke="#ffd700" stroke-width="1.5"/>
-                                <ellipse cx="100" cy="65" rx="10" ry="13" fill="#c49474"/>
-                            </svg>
-                        </div>
-                        <p class="font-cinzel text-xs text-gold-300 tracking-widest uppercase">Nuestra Señora de Guadalupe</p>
-                    </div>
-                </div>
-            </div>
-        </header>
+        </section>
 
-        <!-- Countdown Timer Section -->
-        <section class="max-w-4xl mx-auto w-full px-4 -mt-8 relative z-20">
-            <div class="bg-white border-2 border-gold-500 rounded-2xl shadow-xl p-6 text-center">
-                <h2 class="font-cinzel text-guadalupe-deepRed text-sm sm:text-base font-bold tracking-wider uppercase mb-4">
-                    <i class="fas fa-hourglass-half text-gold-500 mr-2"></i>Tiempo Restante para la Velación
-                </h2>
-                <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-lg mx-auto">
-                    <div class="bg-guadalupe-cream border border-gold-300 rounded-xl p-3 shadow-inner">
-                        <span id="days" class="font-bold text-2xl sm:text-4xl text-guadalupe-deepRed font-playfair block">00</span>
-                        <span class="text-[10px] sm:text-xs text-gray-600 uppercase tracking-wider font-semibold">Días</span>
-                    </div>
-                    <div class="bg-guadalupe-cream border border-gold-300 rounded-xl p-3 shadow-inner">
-                        <span id="hours" class="font-bold text-2xl sm:text-4xl text-guadalupe-deepRed font-playfair block">00</span>
-                        <span class="text-[10px] sm:text-xs text-gray-600 uppercase tracking-wider font-semibold">Horas</span>
-                    </div>
-                    <div class="bg-guadalupe-cream border border-gold-300 rounded-xl p-3 shadow-inner">
-                        <span id="minutes" class="font-bold text-2xl sm:text-4xl text-guadalupe-deepRed font-playfair block">00</span>
-                        <span class="text-[10px] sm:text-xs text-gray-600 uppercase tracking-wider font-semibold">Min</span>
-                    </div>
-                    <div class="bg-guadalupe-cream border border-gold-300 rounded-xl p-3 shadow-inner">
-                        <span id="seconds" class="font-bold text-2xl sm:text-4xl text-guadalupe-deepRed font-playfair block">00</span>
-                        <span class="text-[10px] sm:text-xs text-gray-600 uppercase tracking-wider font-semibold">Seg</span>
-                    </div>
+        <!-- Indicaciones de Estacionamiento y Acceso -->
+        <section class="bg-amber-50 p-6 rounded-2xl border border-amber-300 shadow-sm text-sm text-gray-700 space-y-2">
+            <h4 class="font-cinzel font-bold text-guadalupe-deepRed text-base flex items-center gap-2">
+                <i class="fas fa-info-circle text-guadalupe-gold"></i> Indicaciones importantes de acceso:
+            </h4>
+            <p>• Puedes dejar tu carro estacionado por el Blvd. La Encantada, fuera de la Privada Alebrijes y pasar por la entrada peatonal[cite: 1].</p>
+            <p>• En la primera caseta mencionar que vienes a <strong>Deseos #18</strong>. En la entrada de la privada Alebrijes, marca <strong>218</strong>[cite: 1].</p>
+        </section>
+
+        <!-- Cuenta Regresiva -->
+        <section class="bg-guadalupe-deepRed text-white p-6 rounded-3xl text-center shadow-lg">
+            <h3 class="font-cinzel text-guadalupe-gold font-bold text-lg mb-4 uppercase tracking-wider">Faltan</h3>
+            <div id="countdown" class="flex justify-center gap-4 text-center">
+                <div class="bg-black/30 px-4 py-2 rounded-xl"><span id="days" class="text-2xl font-bold text-guadalupe-gold block">00</span><span class="text-xs">Días</span></div>
+                <div class="bg-black/30 px-4 py-2 rounded-xl"><span id="hours" class="text-2xl font-bold text-guadalupe-gold block">00</span><span class="text-xs">Horas</span></div>
+                <div class="bg-black/30 px-4 py-2 rounded-xl"><span id="minutes" class="text-2xl font-bold text-guadalupe-gold block">00</span><span class="text-xs">Min</span></div>
+                <div class="bg-black/30 px-4 py-2 rounded-xl"><span id="seconds" class="text-2xl font-bold text-guadalupe-gold block">00</span><span class="text-xs">Seg</span></div>
+            </div>
+        </section>
+
+        <!-- Cronograma de Actividades -->
+        <section class="bg-white p-8 rounded-3xl border border-amber-200 shadow-xl">
+            <div class="text-center mb-8">
+                <i class="fas fa-list-ol text-guadalupe-gold text-3xl mb-2"></i>
+                <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-guadalupe-deepRed uppercase">Programa de Actividades</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-guadalupe-gold to-transparent mx-auto my-3"></div>
+                <p class="text-gray-600 text-xs sm:text-sm font-playfair italic">Para que con tiempo hagas tu agenda y nos acompañes[cite: 1]</p>
+            </div>
+
+            <!-- Lista del Cronograma -->
+            <div class="space-y-3 max-w-xl mx-auto">
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200">
+                    <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">06:45 PM</div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Primer Rosario Guadalupano[cite: 1]</h4></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200">
+                    <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">07:30 PM</div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Coffee Break (sorteo)[cite: 1]</h4></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200">
+                    <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">07:45 PM</div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Segundo Rosario</h4><p class="text-xs text-gray-600">Misterios Gloriosos[cite: 1]</p></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200">
+                    <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">08:30 PM</div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Cena[cite: 1]</h4></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200">
+                    <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">09:00 PM</div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Tercer Rosario</h4><p class="text-xs text-gray-600">Gozosos[cite: 1]</p></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200">
+                    <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">09:45 PM</div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Coffee Break (sorteo)[cite: 1]</h4></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200">
+                    <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">10:00 PM</div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Cuarto Rosario</h4><p class="text-xs text-gray-600">Luminosos[cite: 1]</p></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200">
+                    <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">10:45 PM</div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Mañanitas a nuestra querida Virgen María de Guadalupe[cite: 1]</h4></div>
                 </div>
             </div>
         </section>
 
-        <!-- Details & Program Section -->
-        <main class="max-w-4xl mx-auto w-full px-4 py-12 space-y-12">
-            
-            <div class="grid md:grid-cols-3 gap-6 text-center">
-                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md">
-                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 mx-auto shadow"><i class="far fa-calendar-alt"></i></div>
-                    <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Fecha</h3>
-                    <p class="text-gray-700 font-semibold mt-1">11 de Diciembre, 2026</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md">
-                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 mx-auto shadow"><i class="far fa-clock"></i></div>
-                    <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Hora</h3>
-                    <p class="text-gray-700 font-semibold mt-1">8:00 PM</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-gold-300 shadow-md">
-                    <div class="w-14 h-14 bg-guadalupe-red text-gold-300 rounded-full flex items-center justify-center text-2xl mb-4 mx-auto shadow"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3 class="font-cinzel font-bold text-lg text-guadalupe-deepRed">Lugar</h3>
-                    <p class="text-gray-700 font-semibold mt-1">Domicilio Particular</p>
-                </div>
+        <!-- Formulario RSVP -->
+        <section id="rsvp" class="bg-white p-8 sm:p-10 rounded-3xl border border-amber-200 shadow-2xl relative">
+            <div class="text-center mb-8">
+                <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-guadalupe-deepRed">Confirmación de Asistencia</h2>
+                <p class="text-gray-600 text-sm mt-1">Por caridad, te pedimos confirmar cuántas personas asistirán[cite: 1].</p>
+                <div class="w-16 h-1 bg-guadalupe-gold mx-auto mt-3"></div>
             </div>
 
-            <!-- RSVP Form Section -->
-            <div id="rsvp" class="bg-gradient-to-br from-guadalupe-deepRed to-red-950 text-white p-8 sm:p-10 rounded-3xl border-2 border-gold-500 shadow-2xl relative">
-                
-                <div class="text-center mb-8">
-                    <i class="fas fa-envelope-open-text text-gold-300 text-3xl mb-2"></i>
-                    <h2 class="font-cinzel text-2xl sm:text-3xl font-bold gold-gradient-text uppercase">Confirmación de Asistencia</h2>
-                    <p class="text-gold-100 text-xs sm:text-sm mt-1 max-w-md mx-auto">
-                        Por favor confirma tu asistencia para organizar de la mejor manera los alimentos y espacios.
-                    </p>
+            <form id="rsvpForm" class="space-y-5 max-w-xl mx-auto">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="Nombre_Completo" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-guadalupe-deepRed focus:outline-none transition">
                 </div>
 
-                <!-- Form with exact names required by Google Sheets -->
-                <form id="rsvpForm" class="space-y-6 max-w-xl mx-auto">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Nombre Completo *</label>
-                        <input type="text" id="nombre" name="Nombre_Completo" required placeholder="Ej. María Elena Rodríguez" 
-                               class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 transition">
-                    </div>
-
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Teléfono *</label>
-                            <input type="tel" id="telefono" name="Telefono" required placeholder="(555) 000-0000" 
-                                   class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 transition">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">¿Asistirás? *</label>
-                            <select id="asistira" name="Asistira" required class="w-full px-4 py-3 rounded-xl bg-guadalupe-deepRed border border-gold-500/50 text-white focus:outline-none focus:border-gold-300 transition">
-                                <option value="Sí">Sí, asistiré con gusto</option>
-                                <option value="No">Lamentablemente no podré</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Número de Acompañantes</label>
-                        <input type="number" id="acompanantes" name="Num_Acompanantes" min="0" max="10" value="0" 
-                               class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white focus:outline-none focus:border-gold-300 transition">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Intención u Oración (Opcional)</label>
-                        <textarea id="comentarios" name="Comentarios" rows="3" placeholder="Escribe aquí tu petición..." 
-                                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-gold-500/50 text-white placeholder-gray-400 focus:outline-none focus:border-gold-300 transition"></textarea>
-                    </div>
-
-                    <button type="submit" id="submitBtn"
-                            class="w-full py-4 bg-gradient-to-r from-gold-500 via-gold-300 to-gold-600 text-guadalupe-deepRed font-bold uppercase tracking-widest rounded-xl shadow-xl hover:brightness-110 transition duration-300 flex items-center justify-center gap-2">
-                        <i class="fas fa-paper-plane"></i>
-                        <span>Confirmar mi Asistencia</span>
-                    </button>
-                </form>
-
-                <!-- Success Confirmation Message -->
-                <div id="successMessage" class="hidden text-center py-8 space-y-4">
-                    <div class="w-20 h-20 bg-gold-500 text-guadalupe-deepRed rounded-full flex items-center justify-center text-4xl mx-auto shadow-xl animate-bounce">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <h3 class="font-cinzel text-2xl font-bold text-gold-300">¡Confirmación Recibida!</h3>
-                    <p class="text-white text-sm max-w-md mx-auto">
-                        Muchas gracias por confirmar. Que la Virgen de Guadalupe derrame infinitas bendiciones sobre ti y tu familia. ¡Te esperamos!
-                    </p>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Teléfono / Celular *</label>
+                    <input type="tel" id="telefono" name="Telefono" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-guadalupe-deepRed focus:outline-none transition">
                 </div>
 
-            </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">¿Asistirá? *</label>
+                    <select id="asistira" name="Asistira" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-guadalupe-deepRed focus:outline-none transition bg-white">
+                        <option value="">Seleccione una opción</option>
+                        <option value="Sí Asistiré">Sí Asistiré</option>
+                        <option value="No Podré Asistir">No Podré Asistir</option>
+                    </select>
+                </div>
 
-        </main>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Número de Acompañantes</label>
+                    <input type="number" id="acompanantes" name="Num_Acompanantes" min="0" value="0" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-guadalupe-deepRed focus:outline-none transition">
+                </div>
 
-        <footer class="bg-guadalupe-deepRed text-gold-300 text-center py-8 px-4 border-t-2 border-gold-500">
-            <p class="font-greatvibes text-2xl mb-1">"Reina de México y Emperatriz de América"</p>
-            <p class="text-xs text-gold-100/70 font-light">Organizado con devoción por la comunidad guadalupana • 2026</p>
-        </footer>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Comentarios o Alergias</label>
+                    <textarea id="comentarios" name="Comentarios" rows="2" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-guadalupe-deepRed focus:outline-none transition"></textarea>
+                </div>
 
-    </div>
+                <button type="submit" id="submitBtn" class="w-full bg-guadalupe-deepRed hover:bg-red-900 text-guadalupe-gold font-cinzel font-bold py-4 rounded-xl shadow-lg transition duration-200 tracking-wider uppercase">
+                    Enviar Confirmación
+                </button>
+            </form>
 
-    <!-- JavaScript logic & Google Sheets integration -->
+            <div id="responseMessage" class="hidden mt-6 p-4 text-center rounded-xl font-medium"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-guadalupe-darkGreen text-amber-100 text-center py-6 mt-12 border-t-2 border-guadalupe-gold text-xs">
+        <p class="font-cinzel tracking-widest">FAMILIA SERRANO PEÑA • 2026</p>
+    </footer>
+
+    <!-- Scripts -->
     <script>
-        // Countdown Timer
-        const targetDate = new Date("December 11, 2026 20:00:00").getTime();
-        function updateCountdown() {
+        // Cuenta regresiva
+        const targetDate = new Date("December 11, 2026 18:30:00").getTime();
+        setInterval(() => {
             const now = new Date().getTime();
-            const distance = targetDate - now;
-            if (distance < 0) return;
-            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
-        }
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        // Music Toggle
-        const musicToggle = document.getElementById('musicToggle');
-        const bgMusic = document.getElementById('bgMusic');
-        let isPlaying = false;
-        musicToggle.addEventListener('click', () => {
-            if (isPlaying) {
-                bgMusic.pause();
-                isPlaying = false;
-            } else {
-                bgMusic.play();
-                isPlaying = true;
+            const difference = targetDate - now;
+            if (difference > 0) {
+                document.getElementById("days").innerText = Math.floor(difference / (1000 * 60 * 60 * 24));
+                document.getElementById("hours").innerText = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById("minutes").innerText = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById("seconds").innerText = Math.floor((difference % (1000 * 60)) / 1000);
             }
-        });
+        }, 1000);
 
-        // Google Sheets Integration
-        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw55uMBuM3YmtNZ-52a2BHQdoN0EpnbX8QfQxGLj2OcnqTWLoW6MszlnLwB9KDIlX8-/exec";
+        // Envío de formulario hacia Apps Script
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw55uMBuM3YmtNZ-52a2BHQdoN0EpnbX8QfQxGLj2OcnqTWLoW6MszlnLwB9KDIlX8-/exec'; // Mantén tu URL de Google Apps Script
 
-        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+        const form = document.getElementById('rsvpForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const responseMessage = document.getElementById('responseMessage');
+
+        form.addEventListener('submit', e => {
             e.preventDefault();
-            const formData = new FormData(this);
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Guardando...`;
             submitBtn.disabled = true;
+            submitBtn.innerText = "Enviando...";
 
-            fetch(WEB_APP_URL, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('rsvpForm').classList.add('hidden');
-                document.getElementById('successMessage').classList.remove('hidden');
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Ocurrió un error al enviar tus datos. Inténtalo de nuevo.');
-                submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> <span>Confirmar mi Asistencia</span>`;
-                submitBtn.disabled = false;
-            });
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    responseMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                    responseMessage.classList.add('bg-green-100', 'text-green-800');
+                    responseMessage.innerText = "¡Gracias por confirmar tu asistencia!";
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Enviar Confirmación";
+                })
+                .catch(error => {
+                    responseMessage.classList.remove('hidden', 'bg-green-100', 'text-green-800');
+                    responseMessage.classList.add('bg-red-100', 'text-red-700');
+                    responseMessage.innerText = "Hubo un error al enviar. Inténtalo de nuevo.";
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Enviar Confirmación";
+                });
         });
     </script>
 </body>
