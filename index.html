@@ -44,20 +44,31 @@
             background-size: 30px 30px;
             background-position: 0 0, 15px 15px;
         }
+        /* Efecto de brillo iluminado animado para la imagen */
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 15px #D4AF37, 0 0 30px #F4E07B, inset 0 0 15px #D4AF37;
+            }
+            50% {
+                box-shadow: 0 0 30px #F4E07B, 0 0 50px #D4AF37, inset 0 0 25px #F4E07B;
+            }
+        }
+        .image-glow {
+            animation: glow 3s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="font-montserrat text-gray-800 antialiased selection:bg-guadalupe-gold selection:text-white">
 
-    <!-- Header / Portada con Imagen Oficial de la Virgen de Guadalupe -->
+    <!-- Header / Portada con Imagen y Efecto de Brillo -->
     <header class="relative bg-gradient-to-b from-guadalupe-wine via-guadalupe-deepRed to-guadalupe-wine text-white py-14 px-4 shadow-2xl text-center overflow-hidden border-b-4 border-guadalupe-gold">
         <div class="max-w-3xl mx-auto relative z-10 flex flex-col items-center">
             
-            <!-- Imagen Real y Verificada de la Virgen de Guadalupe -->
-            <div class="relative mb-6 group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-guadalupe-gold via-guadalupe-lightGold to-guadalupe-gold rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Nuestra_Se%C3%B1ora_de_Guadalupe%2C_Basilica_of_Guadalupe%2C_Mexico_City_%2838384931756%29.jpg" 
+            <!-- Imagen con tu link exacto y efecto de brillo iluminado -->
+            <div class="relative mb-6">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Virgen_De_Guadalupe_%28Cara%29.png/960px-Virgen_De_Guadalupe_%28Cara%29.png" 
                      alt="Nuestra Señora de Guadalupe" 
-                     class="relative w-36 h-48 sm:w-44 sm:h-56 object-cover rounded-full border-4 border-guadalupe-gold shadow-2xl">
+                     class="w-36 h-36 sm:w-44 sm:h-44 object-cover rounded-full border-4 border-guadalupe-gold image-glow bg-white p-1">
             </div>
 
             <span class="text-guadalupe-lightGold font-cinzel tracking-widest text-xs sm:text-sm uppercase font-semibold block mb-2">Familia Serrano Peña</span>
@@ -95,7 +106,7 @@
                 </div>
             </div>
 
-            <!-- Lugar con Tu Enlace Exacto de Google Maps -->
+            <!-- Lugar con Botón de Google Maps -->
             <div class="p-4 rounded-2xl bg-guadalupe-cream border border-amber-200/80 shadow-sm flex flex-col justify-between">
                 <div>
                     <i class="fas fa-map-marker-alt text-guadalupe-gold text-3xl mb-3"></i>
@@ -104,7 +115,6 @@
                         Deseos #18, Privada Alebrijes, La Encantada Residencial
                     </p>
                 </div>
-                <!-- Botón de Google Maps -->
                 <div class="mt-4">
                     <a href="https://maps.app.goo.gl/DHpTkZJNEtkJbrts7" target="_blank" 
                        class="inline-flex items-center justify-center gap-2 w-full bg-guadalupe-deepRed hover:bg-red-900 text-guadalupe-lightGold text-xs font-bold py-2.5 px-4 rounded-xl shadow transition duration-200 uppercase tracking-wider border border-guadalupe-gold/30">
@@ -198,7 +208,7 @@
 
                 <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200 shadow-sm">
                     <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">10:45 PM</div>
-                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Mañanitas a nuestra querida Virgen María de Guadalupe</h4></div>
+                    <div><h4 class="font-bold text-guadunnel text-sm sm:text-base">Mañanitas a nuestra querida Virgen María de Guadalupe</h4></div>
                 </div>
             </div>
         </section>
