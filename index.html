@@ -38,7 +38,6 @@
         }
     </script>
     <style>
-        /* Fondo con patrón elegante de encaje/puntos dorados */
         body {
             background-color: #FDFBF7;
             background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px), radial-gradient(#D4AF37 0.75px, #FDFBF7 0.75px);
@@ -53,10 +52,10 @@
     <header class="relative bg-gradient-to-b from-guadalupe-wine via-guadalupe-deepRed to-guadalupe-wine text-white py-14 px-4 shadow-2xl text-center overflow-hidden border-b-4 border-guadalupe-gold">
         <div class="max-w-3xl mx-auto relative z-10 flex flex-col items-center">
             
-            <!-- Imagen Centrada de la Virgen de Guadalupe -->
+            <!-- Imagen Centrada y Segura de la Virgen de Guadalupe -->
             <div class="relative mb-6 group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-guadalupe-gold via-guadalupe-lightGold to-guadalupe-gold rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Virgen_de_guadalupe1.jpg/440px-Virgen_de_guadalupe1.jpg" 
+                <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&q=80&w=400" 
                      alt="Nuestra Señora de Guadalupe" 
                      class="relative w-36 h-48 sm:w-44 sm:h-56 object-cover rounded-full border-4 border-guadalupe-gold shadow-2xl">
             </div>
@@ -119,22 +118,18 @@
             </h3>
             
             <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto">
-                <!-- Días -->
                 <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-guadalupe-gold/50 shadow-inner">
                     <span id="days" class="text-3xl sm:text-4xl font-extrabold text-guadalupe-lightGold font-cinzel block">00</span>
                     <span class="text-xs uppercase tracking-wider font-semibold text-amber-200 mt-1 block">Días</span>
                 </div>
-                <!-- Horas -->
                 <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-guadalupe-gold/50 shadow-inner">
                     <span id="hours" class="text-3xl sm:text-4xl font-extrabold text-guadalupe-lightGold font-cinzel block">00</span>
                     <span class="text-xs uppercase tracking-wider font-semibold text-amber-200 mt-1 block">Horas</span>
                 </div>
-                <!-- Minutos -->
                 <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-guadalupe-gold/50 shadow-inner">
                     <span id="minutes" class="text-3xl sm:text-4xl font-extrabold text-guadalupe-lightGold font-cinzel block">00</span>
                     <span class="text-xs uppercase tracking-wider font-semibold text-amber-200 mt-1 block">Minutos</span>
                 </div>
-                <!-- Segundos -->
                 <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-guadalupe-gold/50 shadow-inner">
                     <span id="seconds" class="text-3xl sm:text-4xl font-extrabold text-guadalupe-lightGold font-cinzel block">00</span>
                     <span class="text-xs uppercase tracking-wider font-semibold text-amber-200 mt-1 block">Segundos</span>
@@ -250,7 +245,6 @@
 
     <!-- Scripts -->
     <script>
-        // Cuenta regresiva ajustada al 11 de Diciembre a las 6:30 PM
         const targetDate = new Date("December 11, 2026 18:30:00").getTime();
         setInterval(() => {
             const now = new Date().getTime();
@@ -263,7 +257,6 @@
             }
         }, 1000);
 
-        // Webhook URL de Google Apps Script integrado directamente
         const scriptURL = 'https://script.google.com/macros/s/AKfycbw55uMBuM3YmtNZ-52a2BHQdoN0EpnbX8QfQxGLj2OcnqTWLoW6MszlnLwB9KDIlX8-/exec';
 
         const form = document.getElementById('rsvpForm');
