@@ -44,13 +44,13 @@
             background-size: 30px 30px;
             background-position: 0 0, 15px 15px;
         }
-        /* Efecto de brillo iluminado animado para la imagen */
+        /* Efecto de resplandor e iluminación suave */
         @keyframes glow {
             0%, 100% {
-                box-shadow: 0 0 15px #D4AF37, 0 0 30px #F4E07B, inset 0 0 15px #D4AF37;
+                box-shadow: 0 0 20px #D4AF37, 0 0 35px #F4E07B;
             }
             50% {
-                box-shadow: 0 0 30px #F4E07B, 0 0 50px #D4AF37, inset 0 0 25px #F4E07B;
+                box-shadow: 0 0 35px #F4E07B, 0 0 60px #D4AF37;
             }
         }
         .image-glow {
@@ -60,15 +60,17 @@
 </head>
 <body class="font-montserrat text-gray-800 antialiased selection:bg-guadalupe-gold selection:text-white">
 
-    <!-- Header / Portada con Imagen y Efecto de Brillo -->
+    <!-- Header / Portada con Imagen Completa y Efecto de Brillo -->
     <header class="relative bg-gradient-to-b from-guadalupe-wine via-guadalupe-deepRed to-guadalupe-wine text-white py-14 px-4 shadow-2xl text-center overflow-hidden border-b-4 border-guadalupe-gold">
         <div class="max-w-3xl mx-auto relative z-10 flex flex-col items-center">
             
-            <!-- Imagen con tu link exacto y efecto de brillo iluminado -->
+            <!-- Contenedor con la imagen ajustada para verse 100% COMPLETA -->
             <div class="relative mb-6">
-                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Virgen_De_Guadalupe_%28Cara%29.png/960px-Virgen_De_Guadalupe_%28Cara%29.png" 
-                     alt="Nuestra Señora de Guadalupe" 
-                     class="w-36 h-36 sm:w-44 sm:h-44 object-cover rounded-full border-4 border-guadalupe-gold image-glow bg-white p-1">
+                <div class="w-40 h-40 sm:w-52 sm:h-52 rounded-full border-4 border-guadalupe-gold image-glow bg-amber-50 p-2 flex items-center justify-center overflow-hidden shadow-2xl">
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Virgen_De_Guadalupe_%28Cara%29.png/960px-Virgen_De_Guadalupe_%28Cara%29.png" 
+                         alt="Nuestra Señora de Guadalupe" 
+                         class="w-full h-full object-contain drop-shadow-md">
+                </div>
             </div>
 
             <span class="text-guadalupe-lightGold font-cinzel tracking-widest text-xs sm:text-sm uppercase font-semibold block mb-2">Familia Serrano Peña</span>
@@ -208,7 +210,7 @@
 
                 <div class="flex items-center gap-4 p-3 rounded-xl bg-guadalupe-cream border border-amber-200 shadow-sm">
                     <div class="bg-guadalupe-deepRed text-guadalupe-gold font-bold px-3 py-2 rounded-lg text-xs sm:text-sm whitespace-nowrap shadow">10:45 PM</div>
-                    <div><h4 class="font-bold text-guadunnel text-sm sm:text-base">Mañanitas a nuestra querida Virgen María de Guadalupe</h4></div>
+                    <div><h4 class="font-bold text-guadalupe-deepRed text-sm sm:text-base">Mañanitas a nuestra querida Virgen María de Guadalupe</h4></div>
                 </div>
             </div>
         </section>
